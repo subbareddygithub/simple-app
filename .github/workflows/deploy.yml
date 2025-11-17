@@ -24,8 +24,8 @@ jobs:
     - name: Update manifest
       run: |
         sed -i "s|image: .*|image: 473991839694.dkr.ecr.us-east-1.amazonaws.com/simple-app:${{ github.sha }}|g" k8s/app.yaml
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "subba9678@gmail.com"
+        git config --local user.name "subbareddygithub"
         git add k8s/app.yaml
         git diff --staged --quiet || git commit -m "Update image to ${{ github.sha }}"
         git push
